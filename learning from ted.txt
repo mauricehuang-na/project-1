@@ -1,0 +1,164 @@
+Sumarry
+
+https://github.com/mauricehuang-na/project-1/blob/master/deploy.json
+
+Installed a git client
+Registered mauricehuang-na to githib server, and created repository on github server (ot do it locally, git init)
+on the github folder of local pc - workspace
+ edit local, add > commit > push (origin)
+On goolge chrom client, edited a json file, then pull
+
+Git BASH
+---------------------------------------------
+mauri@DESKTOP-0OVAMA1 MINGW64 ~
+$ cd ~
+
+mauri@DESKTOP-0OVAMA1 MINGW64 ~
+$ pwd
+/c/Users/mauri
+
+mauri@DESKTOP-0OVAMA1 MINGW64 ~
+$ cd "C:\Users\mauri\OneDrive\Documents\GitHub\Project-1"
+
+mauri@DESKTOP-0OVAMA1 MINGW64 ~/OneDrive/Documents/GitHub/Project-1 (master)
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code-1.ps1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+$ git add code-1.ps1
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   code-1.ps1
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        code-2.ps1
+
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   code-1.ps1
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        codes/
+
+$ git add deploy.json
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   deploy.json
+
+$ git commit deploy.json
+[master ea68d71] Edit auto-deploy json
+ 1 file changed, 15 insertions(+)
+ create mode 100644 deploy.json
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 494 bytes | 494.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mauricehuang-na/project-1.git
+   d2aece9..ea68d71  master -> master
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Changed in google chrome clinet, then you need to pull from origin to the local repository
+$ git pull origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/mauricehuang-na/project-1
+   ea68d71..61e7a70  master     -> origin/master
+Updating ea68d71..61e7a70
+Fast-forward
+ deploy.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+
+
+
+
+
+
+
+
+
+On Azure portal cloud shell
+---------------------------------------------
+PS /home/maurice/clouddrive> git init
+PS /home/maurice/clouddrive> git add 
+PS /home/maurice/clouddrive> git config --global user.email "mauricehuang@hotmail.com"
+PS /home/maurice/clouddrive> git config --global user.name "mauricehuang"
+PS /home/maurice/clouddrive> git branch slave
+PS /home/maurice/clouddrive> git branch
+PS /home/maurice/clouddrive> git add attach_new_disk.ps1
+PS /home/maurice/clouddrive> git commit
+
+PS /home/maurice/clouddrive> rm ./attach_new_disk.ps1
+PS /home/maurice/clouddrive> git checkout
+PS /home/maurice/clouddrive> git checkout slave
+PS /home/maurice/clouddrive> more ./attach_new_disk.ps1
+PS /home/maurice/clouddrive> git checkout master
+PS /home/maurice/clouddrive> git status
+PS /home/maurice/clouddrive> git branch
